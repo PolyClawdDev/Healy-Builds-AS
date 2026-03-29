@@ -36,11 +36,11 @@ export default function Navbar() {
     <>
       <header style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        background: isTransparent ? 'transparent' : 'rgba(8,8,8,0.72)',
-        backdropFilter: isTransparent ? 'none' : 'blur(24px)',
-        WebkitBackdropFilter: isTransparent ? 'none' : 'blur(24px)',
-        borderBottom: isTransparent ? 'none' : '1px solid rgba(255,255,255,0.06)',
-        transition: 'all 0.4s cubic-bezier(0.4,0,0.2,1)',
+        background: isTransparent ? 'transparent' : 'rgba(6,6,6,0.65)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        borderBottom: isTransparent ? 'none' : '1px solid rgba(255,255,255,0.07)',
+        transition: 'background 0.4s ease, border-color 0.4s ease',
       }}>
         {/* Red accent line top */}
         {!isTransparent && (
