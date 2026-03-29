@@ -12,12 +12,12 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'Healy Builds AS – Premium Painting & Carpentry | Oslo, Bærum, Asker',
-  description: 'Top-rated construction company specialising in painting, carpentry, flooring, renovation, and kitchen installation across Oslo, Bærum, Asker and Drammen. 15+ years experience. 4.8★ rated.',
-  keywords: 'maler oslo, snekker oslo, oppussing bærum, gulvlegging asker, kjøkkenmontasje drammen, healy builds, renovation oslo, painter carpenter norway',
+  title: 'Healy Builds AS – Maling, Snekker & Renovering | Oslo, Bærum, Asker',
+  description: 'Toppvurdert håndverkerfirma med over 15 års erfaring innen maling, snekkerarbeid, gulvlegging, renovering og kjøkkenmontasje i Oslo, Bærum, Asker og Drammen. 4.8★ på 79 anmeldelser. Gratis befaring.',
+  keywords: 'maler oslo, snekker oslo, oppussing bærum, gulvlegging asker, kjøkkenmontasje drammen, healy builds, renovering oslo, maling og snekker norge, parkett, laminat, terrasse, mikrocement',
   openGraph: {
-    title: 'Healy Builds AS – Precision Craftsmanship',
-    description: 'Premium painting, carpentry & renovation services across Oslo and surrounding areas.',
+    title: 'Healy Builds AS – Presisjon og Håndverk',
+    description: 'Førsteklasses maling, snekkerarbeid og renovering i Oslo-området. 15+ års erfaring. 4.8★ vurdert av 79 kunder. Kontakt oss for gratis befaring.',
     type: 'website',
     locale: 'nb_NO',
     siteName: 'Healy Builds AS',
