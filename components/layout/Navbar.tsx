@@ -139,27 +139,42 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div style={{
         position: 'fixed', top: 72, left: 0, right: 0, zIndex: 99,
-        background: '#0a0a0a', borderTop: '1px solid rgba(255,255,255,0.07)',
-        maxHeight: open ? '100vh' : 0, overflow: 'hidden',
-        transition: 'max-height 0.4s cubic-bezier(0.4,0,0.2,1)',
+        background: 'rgba(8,8,8,0.82)',
+        backdropFilter: 'blur(24px)',
+        WebkitBackdropFilter: 'blur(24px)',
+        borderTop: '1px solid rgba(255,255,255,0.06)',
+        maxHeight: open ? 500 : 0, overflow: 'hidden',
+        transition: 'max-height 0.35s cubic-bezier(0.4,0,0.2,1)',
       }}>
-        <div style={{ padding: '24px 24px 32px' }}>
+        <div style={{ padding: '12px 24px 24px' }}>
           {links.map(l => (
             <Link key={l.href} href={l.href} style={{
-              display: 'block', padding: '16px 0',
-              color: pathname === l.href ? '#c0392b' : 'rgba(255,255,255,0.8)',
-              fontWeight: 700, fontSize: 14, letterSpacing: '0.08em',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: '13px 0',
+              color: pathname === l.href ? '#c0392b' : 'rgba(255,255,255,0.72)',
+              fontWeight: 600, fontSize: 13, letterSpacing: '0.1em',
               textTransform: 'uppercase', textDecoration: 'none',
-              borderBottom: '1px solid rgba(255,255,255,0.05)',
+              borderBottom: '1px solid rgba(255,255,255,0.04)',
             }}>
               {l.label}
+              {pathname === l.href && <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#c0392b', display: 'inline-block' }} />}
             </Link>
           ))}
-          <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <a href="tel:+4746549432" className="btn-ghost" style={{ justifyContent: 'center', textAlign: 'center', fontSize: 12 }}>
-              <Phone size={15} /> +47 46 54 94 32
+          <div style={{ marginTop: 16, display: 'flex', gap: 10 }}>
+            <a href="tel:+4746549432" style={{
+              flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7,
+              padding: '11px 0', border: '1px solid rgba(255,255,255,0.12)',
+              color: 'rgba(255,255,255,0.65)', fontSize: 12, fontWeight: 600,
+              textDecoration: 'none', letterSpacing: '0.04em',
+            }}>
+              <Phone size={13} /> Ring nå
             </a>
-            <Link href="/contact" className="btn-red" style={{ justifyContent: 'center', textAlign: 'center', fontSize: 12 }}>
+            <Link href="/contact" style={{
+              flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center',
+              padding: '11px 0', background: '#c0392b',
+              color: '#fff', fontSize: 12, fontWeight: 700,
+              textDecoration: 'none', letterSpacing: '0.06em', textTransform: 'uppercase',
+            }}>
               {t.nav.getQuote}
             </Link>
           </div>
